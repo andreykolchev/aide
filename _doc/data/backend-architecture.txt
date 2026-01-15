@@ -1,0 +1,17 @@
+Backend Architecture Details
+
+The backend is implemented in Java 25 using Spring Boot 4.
+It follows a layered architecture with clear separation of concerns.
+
+Controllers are responsible only for HTTP request handling and validation.
+Business logic is implemented in service classes.
+Persistence is handled through Spring Data JPA repositories.
+
+The backend communicates with the vector database using a REST-based client.
+Vector operations such as upsert and similarity search are abstracted behind a dedicated service.
+
+Error handling follows a centralized exception handling strategy using
+Spring's @ControllerAdvice mechanism.
+
+The backend is designed to be stateless, enabling horizontal scaling
+behind a load balancer.

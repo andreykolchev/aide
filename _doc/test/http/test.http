@@ -1,0 +1,34 @@
+
+###Gemini
+POST https://generativelanguage.googleapis.com/v1beta/{model=models/*}:embedContent
+
+###
+POST http://localhost:8080/api/documents?project=test
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="architecture-overview.txt"
+
+< data/architecture-overview.txt
+--WebAppBoundary--
+
+###Collection info
+GET http://localhost:6333/collections/{{collectionName}}
+
+###Test Semantic Search
+POST http://localhost:8080/api/search
+Content-Type: application/json
+
+{
+  "query": "How the system is designed?",
+  "project": "backend"
+}
+
+###
+POST http://localhost:8080/api/ask
+Content-Type: application/json
+
+{
+  "question": "Describe the overall system architecture.",
+  "project": "backend"
+}

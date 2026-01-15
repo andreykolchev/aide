@@ -1,0 +1,41 @@
+[Chunk 1]
+System Architecture Overview
+
+The system is designed as a modular, service-oriented backend focused on document ingestion,
+semantic search, and AI-assisted question answering.
+
+The architecture consists of three main layers: the API layer, the intelligence layer,
+and the storage layer.
+
+The API layer is implemented using Spring Boot 3 and exposes REST endpoints for document
+upload, semantic search, and question answering.
+
+The intelligence layer is responsible for text chunking, vector embedding
+
+[Chunk 3]
+designed to be loosely coupled and horizontally scalable.
+
+
+[Chunk 4]
+Backend Architecture Details
+
+The backend is implemented in Java 25 using Spring Boot 3.
+It follows a layered architecture with clear separation of concerns.
+
+Controllers are responsible only for HTTP request handling and validation.
+Business logic is implemented in service classes.
+Persistence is handled through Spring Data JPA repositories.
+
+The backend communicates with the vector database using a REST-based client.
+Vector operations such as upsert and similarity search are abstracted behind
+
+[Chunk 2]
+is responsible for text chunking, vector embedding generation,
+similarity search, and Retrieval-Augmented Generation (RAG). This layer integrates with
+external Large Language Models through HTTP APIs.
+
+The storage layer consists of two main components. Relational data such as document metadata
+and text chunks are stored in PostgreSQL. Vector embeddings are stored in a dedicated vector
+database optimized for similarity search.
+
+All components are designed to be loosely coupled and horizontally sc

@@ -1,0 +1,9 @@
+{
+  "answer": "The system is designed as a modular, service-oriented backend focused on document ingestion, semantic search, and AI-assisted question answering. It is implemented in Java 25 using Spring Boot 3 and follows a layered architecture with clear separation of concerns. All components are designed to be loosely coupled and horizontally scalable.\n\nThe architecture consists of three main layers:\n\n1.  **API Layer:** Implemented using Spring Boot 3, it exposes REST endpoints for document upload, semantic search, and question answering. Controllers in this layer are responsible for HTTP request handling and validation.\n2.  **Intelligence Layer:** This layer is responsible for text chunking, vector embedding generation, similarity search, and Retrieval-Augmented Generation (RAG). It integrates with external Large Language Models through HTTP APIs. Business logic is implemented in service classes within this layer.\n3.  **Storage Layer:** This layer comprises two main components. Relational data, such as document metadata and text chunks, is stored in PostgreSQL. Vector embeddings are stored in a dedicated vector database optimized for similarity search. Persistence is handled through Spring Data JPA repositories, and the backend communicates with the vector database using a REST-based client.",
+  "sources": [
+    1,
+    3,
+    4,
+    2
+  ]
+}

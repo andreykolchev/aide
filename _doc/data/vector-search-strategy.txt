@@ -1,0 +1,14 @@
+Vector Search and Embedding Strategy
+
+Semantic search is implemented using dense vector embeddings.
+Each document is split into smaller text chunks before embedding.
+
+Embeddings are generated using an external AI model optimized for semantic similarity.
+The same embedding model is used for both document chunks and user queries to ensure
+vector space compatibility.
+
+Vector embeddings are stored in a vector database that supports cosine similarity.
+During search, the system retrieves the top K most similar chunks based on vector distance.
+
+Metadata such as document ID, project name, and chunk index are stored as payload
+alongside each vector to enable filtering and traceability.
